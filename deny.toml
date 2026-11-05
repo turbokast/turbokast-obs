@@ -1,0 +1,34 @@
+[graph]
+all-features = true
+
+[advisories]
+version = 2
+yanked = "deny"
+
+[licenses]
+version = 2
+# Apache-2.0 is compatible only through the "or later" option (GPL-3.0), which
+# GPL-2.0-or-later permits. Do not add GPL-2.0-only or proprietary licences.
+allow = [
+  "0BSD",
+  "Apache-2.0",
+  "BSD-2-Clause",
+  "BSD-3-Clause",
+  "CC0-1.0",
+  "GPL-2.0-or-later",
+  "ISC",
+  "LGPL-2.1-or-later",
+  "MIT",
+  "MPL-2.0",
+  "Unicode-3.0",
+  "Unlicense",
+  "Zlib",
+]
+
+[bans]
+multiple-versions = "warn"
+wildcards = "deny"
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"

@@ -1,0 +1,14 @@
+[workspace]
+members = ["companion"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+license = "GPL-2.0-or-later"
+repository = "https://github.com/turbokast/turbokast-obs"
+
+[workspace.lints.rust]
+warnings = "deny"
+
+[workspace.lints.clippy]
+unwrap_used = "deny"

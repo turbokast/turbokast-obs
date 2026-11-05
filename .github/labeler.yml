@@ -1,0 +1,21 @@
+documentation:
+  - changed-files:
+      - any-glob-to-any-file: ["docs/**", "**/*.md"]
+ci:
+  - changed-files:
+      - any-glob-to-any-file: [".github/**"]
+plugin:
+  - changed-files:
+      - any-glob-to-any-file: ["plugin/**"]
+companion:
+  - changed-files:
+      - any-glob-to-any-file: ["companion/**"]
+protocol:
+  - changed-files:
+      - any-glob-to-any-file: ["contracts/**"]
+packaging:
+  - changed-files:
+      - any-glob-to-any-file: ["packaging/**"]
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file: ["Cargo.lock", "**/Cargo.toml"]

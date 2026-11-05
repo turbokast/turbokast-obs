@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+# Advisory only: never a required check. See docs/automation.md.
+language: en-GB
+reviews:
+  profile: assertive
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  in_progress_fortune: false
+  auto_review:
+    enabled: true
+    drafts: false
+  path_instructions:
+    - path: ".github/workflows/**"
+      instructions: |
+        - Pin every `uses:` to a full commit SHA with a version comment.
+        - Keep top-level permissions read-only or empty, and set `persist-credentials: false` on checkout.
+        - Never run pull request code under `pull_request_target`, or give fork pull requests secrets.
+        - Pass `${{ }}` values to `run:` scripts through `env:`.
+    - path: "companion/**"
+      instructions: |
+        - No `unwrap()` or blocking calls in async code. Bound every parser that reads untrusted input.
+        - Local failures must never stop a running broadcast.
+    - path: "contracts/**"
+      instructions: |
+        - This directory is MIT. Flag anything copied from GPL code. Changes must stay additive unless a new contract version is declared.
+    - path: "tests/**"
+      instructions: |
+        - Fixtures must be synthetic or redacted. Flag real usernames, chat logs, keys and tokens.
+chat:
+  auto_reply: true
