@@ -11,7 +11,8 @@ jobs:
   dco:
     name: DCO sign-off
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
+    # Dependabot cannot certify the DCO. Checking the PR author cannot be spoofed by a commit's author field.
+    if: github.event_name == 'pull_request' && github.event.pull_request.user.login != 'dependabot[bot]'
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
