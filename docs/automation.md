@@ -15,6 +15,6 @@ Nothing here needs a paid service. Third-party reviewers are advisory: they can 
 | PR title, labeler, release drafter, stale, lock, welcome | Housekeeping | `workflows/` |
 | CodeRabbit, Sourcery | Advisory AI review | `.coderabbit.yaml`, Sourcery dashboard |
 
-GitHub secret scanning with push protection and private vulnerability reporting are repository settings. Code scanning and dependency review need a public repository on the free plan, so those jobs skip while the repository is private.
+GitHub secret scanning with push protection and private vulnerability reporting are repository settings.
 
 Plugin checks (clang-format, clang-tidy, sanitizers) and release jobs join when that code arrives.
