@@ -14,6 +14,7 @@ Nothing here needs a paid service. Third-party reviewers are advisory: they can 
 | Dependabot | Weekly grouped updates for actions and crates, after a 7-day cooldown, plus security updates | `dependabot.yml` |
 | PR title, labeler, release drafter, stale, lock, welcome | Housekeeping | `workflows/` |
 | CodeRabbit, Sourcery | Advisory AI review | `.coderabbit.yaml`, Sourcery dashboard |
+| Socket, GitGuardian, Snyk, Codacy, SonarQube Cloud | Advisory supply-chain, secret, vulnerability and code-quality checks | GitHub Apps, configured in each service's dashboard |
 
 GitHub secret scanning with push protection and private vulnerability reporting are repository settings.
 
